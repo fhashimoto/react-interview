@@ -188,8 +188,8 @@ The JSON Server is running at: `http://localhost:8089`
 - **Request Body:**
   ```json
   {
-  	"title": "string",          // Required
-  	"description": "string",    // Required
+  	"title": "string",
+  	"description": "string",
   	"completed": boolean,
   	"dueDate": timestamp,
   	"priority": number,
