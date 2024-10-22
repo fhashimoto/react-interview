@@ -1,0 +1,94 @@
+{
+  "todos": [
+    {
+      "title": "Buy groceries",
+      "description": "Milk, bread, eggs, and vegetables",
+      "completed": false,
+      "createdAt": 1729569243,
+      "updatedAt": 1729569243,
+      "dueDate": 1729655643,
+      "priority": 1,
+      "tags": [
+        "shopping",
+        "errands"
+      ],
+      "visual": {
+        "color": "#ffcc00",
+        "fontWeight": "bold"
+      },
+      "id": "1"
+    },
+    {
+      "title": "Incomplete project report",
+      "description": "Finalize and submit the report by end of the week",
+      "completed": false,
+      "createdAt": 1729569243,
+      "updatedAt": 1729577590702,
+      "dueDate": 1729738043,
+      "priority": 2,
+      "tags": [
+        "work",
+        "report"
+      ],
+      "visual": {
+        "color": "#00ccff",
+        "fontWeight": "normal"
+      },
+      "id": "2"
+    },
+    {
+      "title": "Workout at the gym",
+      "description": "Focus on strength training and cardio",
+      "completed": false,
+      "createdAt": 1729569243,
+      "updatedAt": 1729576712129,
+      "dueDate": 1729624443,
+      "priority": "2",
+      "tags": [
+        "health",
+        "fitness"
+      ],
+      "visual": {
+        "color": "#00ff00",
+        "fontWeight": "bold"
+      },
+      "id": "3"
+    },
+    {
+      "title": "Call mom",
+      "description": "Catch up and see how she’s doing",
+      "completed": false,
+      "createdAt": 1729569243,
+      "updatedAt": 1729569243,
+      "dueDate": 1729659243,
+      "priority": 1,
+      "tags": [
+        "family",
+        "communication"
+      ],
+      "visual": {
+        "color": "#ff6699",
+        "fontWeight": "normal"
+      },
+      "id": "4"
+    },
+    {
+      "title": "Read a book",
+      "description": "Finish reading 'The Great Gatsby'",
+      "completed": false,
+      "createdAt": 1729569243,
+      "updatedAt": 1729569243,
+      "dueDate": 1729812243,
+      "priority": 2,
+      "tags": [
+        "leisure",
+        "reading"
+      ],
+      "visual": {
+        "color": "#6600cc",
+        "fontWeight": "italic"
+      },
+      "id": "5"
+    }
+  ]
+}
