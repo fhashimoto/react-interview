@@ -25,8 +25,18 @@ Please follow the order below to complete the tasks:
 ## Instructions
 
 1. Fork this repository and clone it to your local machine.
-2. Set up the app and install dependencies using `npm install`.
-3. Complete the tasks as outlined.
+2. Set up the app and install dependencies using `npm run install:all`.
+3. Start client
+   ```bash
+   cd client
+   npm start
+   ```
+4. Start server
+   ```bash
+   cd server
+   npm start
+   ```
+5. Complete the tasks as outlined.
 
 ## Tools & Technologies
 
@@ -205,4 +215,5 @@ The JSON Server is running at: `http://localhost:8089`
 We're excited to see how you approach this challenge! Feel free to be creative and go beyond the base requirements if you want to showcase more of your skills.
 
 ## JSON Server Docs:
+
 https://github.com/typicode/json-server/tree/v0.17.4
