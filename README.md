@@ -25,7 +25,7 @@ Please follow the order below to complete the tasks:
 ## Instructions
 
 1. Fork this repository and clone it to your local machine.
-2. Set up the app and install dependencies using `npm run install:all`.
+2. Set up the app and install dependencies using `npm install` on the app root.
 3. Start client
    ```bash
    cd client
