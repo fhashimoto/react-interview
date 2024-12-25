@@ -31,11 +31,11 @@ server.use((req, res, next) => {
 
     // Validation: Check for required fields
     if (!newItem.title) {
-        return res.status(400).json({ error: "Title is required" });
-      }
-      if (!newItem.description) {
-        return res.status(400).json({ error: "Description is required" });
-      }
+      return res.status(400).json({ error: "Title is required" });
+    }
+    if (!newItem.description) {
+      return res.status(400).json({ error: "Description is required" });
+    }
 
     // Fill in default values for missing fields
     for (const key in schema) {
@@ -63,24 +63,34 @@ server.use((req, res, next) => {
     const existingItem = router.db.get("todos").find({ id }).value();
 
     if (existingItem) {
-      const updatedItem = {
-        ...existingItem, // Start with existing item properties
-        updatedAt: Date.now(), // Always update updatedAt
-      };
-
-      // Ensure req.body is defined before processing
-      if (req.body) {
-        // Merge only the fields present in the request body
-        Object.entries(req.body).forEach(([key, value]) => {
-          if (value !== undefined) {
-            updatedItem[key] = value; // Update only if value is provided
-          }
-        });
+      if (!existingItem.title) {
+        return res.status(400).json({ error: "Title is required" });
+      }
+      if (!existingItem.description) {
+        return res.status(400).json({ error: "Description is required" });
       }
 
-      // Do not overwrite createdAt
-      updatedItem.createdAt = existingItem.createdAt;
-      req.body = updatedItem; // Update the body with the merged object
+      req.body = {
+        ...req.body,
+        createdAt: existingItem.createdAt,
+        updatedAt: Date.now(),
+      };
+    } else {
+      return res.status(404).json({ error: "Item not found" });
+    }
+  }
+
+  if (req.method === "PATCH") {
+    const id = req.url.split("/").pop();
+    const existingItem = router.db.get("todos").find({ id }).value();
+
+    if (existingItem) {
+      req.body = {
+        ...req.body,
+        updatedAt: Date.now(),
+      };
+    } else {
+      return res.status(404).json({ error: "Item not found" });
     }
   }
 
