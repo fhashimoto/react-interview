@@ -182,14 +182,23 @@ The JSON Server is running at: `http://localhost:8089`
   ```
 - **Response** New todo with ID
 
+##### PATCH /todos/:id
+
+- **Description:** Update an existing todo by ID.
+- **Request Body:**
+  ```json
+  {}
+  ```
+- **Response** Return the updated todo item
+
 ##### PUT /todos/:id
 
 - **Description:** Update an existing todo by ID.
 - **Request Body:**
   ```json
   {
-  	"title": "string",
-  	"description": "string",
+  	"title": "string",         // Required
+  	"description": "string",   // Required
   	"completed": boolean,
   	"dueDate": timestamp,
   	"priority": number,
