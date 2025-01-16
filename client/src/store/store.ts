@@ -2,35 +2,58 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 // Define the initial state
-interface State {
-  count: number;
+export interface IState {
+  item: Array<ITodo>;
+  todo: ITodo | null;
 }
 
-const initialState: State = {
-  count: 0,
+// Todo task interface
+export interface ITodo {
+  id: string;
+  title: string;
+  description: string;
+  completed: boolean;
+  createdAt: number;
+  updatedAt: number;
+  dueDate: number;
+  priority: number;
+  tags: string[];
+  visual: {
+    color: string;
+    fontWeight: string;
+  };
+}
+
+export interface INewTodo {
+  title: string;
+  description: string;
+}
+
+const initialState: IState = {
+  item: [],
+  todo: null,
 };
 
-// Create a slice of the store
-const counterSlice = createSlice({
-  name: "counter",
+const todoSlice = createSlice({
+  name: "todo",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.count += 1;
+    setData: (state, action) => {
+      state.item = action.payload;
     },
-    decrement: (state) => {
-      state.count -= 1;
+    setTodo: (state, action) => {
+      state.todo = action.payload;
     },
   },
 });
 
 // Export the actions
-export const { increment, decrement } = counterSlice.actions;
+export const { setData, setTodo } = todoSlice.actions;
 
 // Create the store
 const store = configureStore({
   reducer: {
-    counter: counterSlice.reducer,
+    todo: todoSlice.reducer,
   },
 });
 
