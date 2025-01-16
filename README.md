@@ -17,10 +17,11 @@ Welcome to the **React To-Do App Challenge**! This repository contains the base 
 Please follow the order below to complete the tasks:
 
 1. [ ] Add the ability to create, read, update, and delete tasks. (CRUD)
-2. [ ] Page with the todo details, including options to update and delete.
-3. [ ] Use pagination to display the to-do list and allow the user to change the number of items per page.
-4. [ ] Enable sorting of the to-do list by at least two fields.
-5. [ ] Enable filtering of the to-do list by at least two fields.
+   <img width="862" alt="image" src="https://github.com/user-attachments/assets/0242ec69-436c-4169-bdf4-4314c3cb74eb" />
+3. [ ] Page with the todo details, including options to update and delete.
+4. [ ] Use pagination to display the to-do list and allow the user to change the number of items per page.
+5. [ ] Enable sorting of the to-do list by at least two fields.
+6. [ ] Enable filtering of the to-do list by at least two fields.
 
 ## Instructions
 
